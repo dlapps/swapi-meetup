@@ -1,0 +1,15 @@
+services:
+  _defaults:
+    public: false
+
+  Dl\StarWarsBundle\DataAccess\DoctrineRepositoryFactory:
+    class: DL\StarWarsBundle\DataAccess\DoctrineRepositoryFactory
+    autowire: true
+
+  DL\StarWarsBundle\DataAccess\CharacterDal:
+    class: DL\StarWarsBundle\DataAccess\CharacterDal
+    factory:
+      - "@Dl\\StarWarsBundle\\DataAccess\\DoctrineRepositoryFactory"
+      - "create"
+    arguments:
+      - "DLStarWarsBundle:CharacterDto"

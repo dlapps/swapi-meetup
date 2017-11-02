@@ -1,0 +1,7 @@
+services:
+  _defaults:
+    public: false
+    autowire: true
+
+  DL\StarWarsBundle\Manager\:
+    resource: '../../Manager/*'

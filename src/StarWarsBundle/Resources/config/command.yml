@@ -1,0 +1,8 @@
+services:
+  _defaults:
+    public: true
+    autoconfigure: true
+    autowire: true
+
+  DL\StarWarsBundle\Command\:
+    resource: '../../Command/*'

@@ -1,0 +1,3 @@
+star_wars_container:
+  resource: "@DLStarWarsBundle/Controller/"
+  type: "annotation"

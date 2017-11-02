@@ -1,0 +1,9 @@
+services:
+  _defaults:
+    public: true
+    autoconfigure: true
+
+  DL\StarWarsBundle\Controller\:
+    resource: '../../Controller/*'
+    tags:
+      - "controller.service_arguments"
