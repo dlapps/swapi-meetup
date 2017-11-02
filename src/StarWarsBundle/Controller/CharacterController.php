@@ -44,8 +44,28 @@ class CharacterController extends Controller
         
         return new Response(
             $serializer->serialize($characterDto, 'json'), Response::HTTP_CREATED, [
-            'Content-Type' => 'application/json',
-        ]
+                'Content-Type' => 'application/json',
+            ]
+        );
+    }
+    
+    /**
+     * @param int                 $index
+     * @param SerializerInterface $serializer
+     *
+     * @return Response
+     *
+     * @Method({"GET"})
+     * @Route("/index/{index}")
+     */
+    public function findByIndex(int $index, CharacterBll $characterBll, SerializerInterface $serializer): Response
+    {
+        $character = $characterBll->findByIndex($index);
+        
+        return new Response(
+            $serializer->serialize($character, 'json'), Response::HTTP_CREATED, [
+                'Content-Type' => 'application/json',
+            ]
         );
     }
 }

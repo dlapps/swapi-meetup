@@ -13,7 +13,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @package DL\StarWarsBundle\Entity
  * @author  Petre Pătrașc <petre@dreamlabs.ro>
  *
- * @ORM\Entity(repositoryClass="DL\StarWarsBundle\DataAccess\CharacterDal")
+ * @ORM\Entity(repositoryClass="DL\StarWarsBundle\DataAccess\CharacterDoctrineDal")
  */
 class CharacterDto
 {

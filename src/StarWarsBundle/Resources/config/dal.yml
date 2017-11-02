@@ -1,13 +1,16 @@
 services:
   _defaults:
     public: false
+    autowire: true
 
   Dl\StarWarsBundle\DataAccess\DoctrineRepositoryFactory:
     class: DL\StarWarsBundle\DataAccess\DoctrineRepositoryFactory
-    autowire: true
 
-  DL\StarWarsBundle\DataAccess\CharacterDal:
-    class: DL\StarWarsBundle\DataAccess\CharacterDal
+  Dl\StarWarsBundle\DataAccess\CharacterSwapiDal:
+    class: DL\StarWarsBundle\DataAccess\CharacterSwapiDal
+
+  DL\StarWarsBundle\DataAccess\CharacterDoctrineDal:
+    class: DL\StarWarsBundle\DataAccess\CharacterDoctrineDal
     factory:
       - "@Dl\\StarWarsBundle\\DataAccess\\DoctrineRepositoryFactory"
       - "create"
