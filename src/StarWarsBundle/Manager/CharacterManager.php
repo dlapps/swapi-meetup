@@ -37,7 +37,8 @@ class CharacterManager
      *
      * @return CharacterDto
      */
-    public function createOrUpdate(CharacterDto $character): CharacterDto {
+    public function createOrUpdate(CharacterDto $character): CharacterDto
+    {
         $violationList = $this->validator->validate($character);
         if (0 !== $violationList->count()) {
             throw new \Exception($violationList);
